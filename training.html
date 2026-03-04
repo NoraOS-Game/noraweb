@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="noraos-icon.png" type="image/png">
+<title>NoraOS — Welcome</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* GLOBAL RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Tahoma, sans-serif;
+    }
+
+    body {
+        background: #ffffff;
+        color: #000000;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    /* NAVIGATION */
+    nav {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 60px auto;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        border-bottom: 2px solid #3A7AFE;
+    }
+
+    /* MAIN TITLE */
+    h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+    }
+
+    p.subtitle {
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 40px;
+    }
+
+    /* BUTTONS */
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        padding: 16px;
+        border-radius: 10px;
+        border: 1px solid #dcdcdc;
+        background: #f7f7f7;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.25s;
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+
+    .btn:hover {
+        background: #e9f0ff;
+        border-color: #3A7AFE;
+        transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: 80px;
+        font-size: 13px;
+        color: #777;
+    }
+
+    /* --- SUBTLE ARG MICRO-GLITCHES (FRIENDLY VERSION) --- */
+
+    /* Button text flicker */
+    .btn:hover span {
+        animation: flicker 0.15s steps(2, end);
+    }
+
+    @keyframes flicker {
+        0% { opacity: 1; }
+        50% { opacity: 0.6; }
+        100% { opacity: 1; }
+    }
+
+    /* Hidden system message (appears only on long hover) */
+    #sysmsg {
+        opacity: 0;
+        transition: opacity 1.5s ease;
+        font-size: 12px;
+        margin-top: 25px;
+        color: #3A7AFE;
+    }
+
+    .btn-container:hover + #sysmsg {
+        opacity: 1;
+    }
+
+    /* Footer micro-change */
+    footer:hover::after {
+        content: " • System Status: Stable";
+        color: #3A7AFE;
+    }
+
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="support.html">Support</a>
+</nav>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AiKrohQqnqg?si=oLe41oPXqt-2XgLT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<footer>
+    © <span id="year"></span> NoraOS — Designed for everyone.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
