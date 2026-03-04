@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About NoraOS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Tahoma, sans-serif;
+    }
+
+    body {
+        background: #ffffff;
+        color: #000000;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    /* NAVIGATION */
+    nav {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 60px auto;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        border-bottom: 2px solid #3A7AFE;
+    }
+
+    /* PAGE TITLE */
+    h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    /* CONTENT BOX */
+    .content-box {
+        max-width: 750px;
+        margin: 0 auto;
+        text-align: left;
+        background: #f7f7f7;
+        padding: 30px 35px;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        line-height: 1.6;
+        font-size: 17px;
+    }
+
+    .content-box p + p {
+        margin-top: 18px;
+    }
+
+    /* SUBTLE ARG EFFECT */
+    .content-box:hover {
+        border-color: #3A7AFE;
+        transition: 0.3s;
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: 70px;
+        font-size: 13px;
+        color: #777;
+    }
+
+    footer:hover::after {
+        content: " • System Integrity: Nominal";
+        color: #3A7AFE;
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="support.html">Support</a>
+</nav>
+
+<h1>About NoraOS</h1>
+
+<div class="content-box">
+    <p>
+        NoraOS is a game about an abandoned operating system that has a ton of secrets. 
+        The main antagonist is the Nora Virtual Assistant, who has its own chat app within the game. 
+        When you say that you have to go, Nora loses her mind — though being an AI herself and having no mind, she does indeed have one!
+    </p>
+
+    <p>
+        The game was made in Unity 2D, and it was created by music artist and YouTuber 
+        <strong>MJOStudios</strong>, who is also the creator of the analog horror series 
+        <em>THE CULT OF KAIDR</em>. MJOStudios, also known as Joseph Sanders, is a neurodiverse 
+        high school student with a deep passion for technology and coding.
+    </p>
+</div>
+
+<footer>
+    © <span id="year"></span> NoraOS — Designed for everyone.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
